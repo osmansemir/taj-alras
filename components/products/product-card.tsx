@@ -2,8 +2,9 @@ import { Info, Share } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
+import { Product } from "@/types";
 
-export default function ProductCard() {
+export default function ProductCard({ product }: { product: Product }) {
   return (
     <div
       className={cn(
@@ -14,19 +15,11 @@ export default function ProductCard() {
       )}
     >
       <div className="relative w-full aspect-3/2 h-5/7">
-        <Image
-          alt="image"
-          src={`https://images.pexels.com/photos/193057/pexels-photo-193057.jpeg`}
-          fill
-          className="z-0"
-        />
+        <Image alt="image" src={product.img} fill className="z-0" />
       </div>
       <div className=" md:h-1/2 w-full ">
-        <h4 className=" pt-2 pl-2 text-2xl font-bold">Laser jet printer</h4>
-        <p className=" p-2 text-sm/4 text-muted-foreground">
-          Wireless; Automatic document feeder; Two-sided printing; Two-sided
-          scanning; Scan to email; Scan to PDF; Fax; Front USB flash drive ...
-        </p>
+        <h4 className=" pt-2 pl-2 text-2xl font-bold">{product.name}</h4>
+        <p className=" p-2 text-sm/4 text-muted-foreground">{product.desc}</p>
         <div className="flex mt-3 gap-1 justify-end pr-2 mb-5">
           <Button title="share" className="">
             <Share />

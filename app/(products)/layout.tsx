@@ -14,6 +14,8 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { geistMono, geistSans } from "@/app/fonts";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export default function Layout({
   children,
@@ -28,6 +30,7 @@ export default function Layout({
         <SidebarProvider>
           <AppSidebar />
           <SidebarInset>
+            <Header />
             <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
               <SidebarTrigger className="-ml-1" />
               <Separator
@@ -39,13 +42,14 @@ export default function Layout({
                   <BreadcrumbItem className="hidden md:block">
                     <BreadcrumbLink href="#">Products</BreadcrumbLink>
                   </BreadcrumbItem>
-                  {/* <BreadcrumbSeparator className="hidden md:block" /> */}
+                  <BreadcrumbSeparator className="hidden md:block" />
                 </BreadcrumbList>
               </Breadcrumb>
             </header>
             {children}
           </SidebarInset>
         </SidebarProvider>
+        <Footer />
       </body>
     </html>
   );

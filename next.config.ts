@@ -11,6 +11,12 @@ const nextConfig: NextConfig = {
         port: "",
         search: "",
       },
+      {
+        protocol: "https",
+        hostname: "**.dummyimage.com",
+        port: "",
+        search: "",
+      },
     ],
   },
 };
