@@ -1,5 +1,5 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
-import { ModeToggle } from "@/components/mode-toggle";
 
 export default function Layout({
   children,
@@ -10,6 +10,7 @@ export default function Layout({
     <div>
       <Header />
       {children}
+      <Footer />
     </div>
   );
 }
