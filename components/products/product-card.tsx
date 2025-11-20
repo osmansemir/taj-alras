@@ -1,0 +1,41 @@
+import { Info, Share } from "lucide-react";
+import Image from "next/image";
+import { Button } from "../ui/button";
+import { cn } from "@/lib/utils";
+
+export default function ProductCard() {
+  return (
+    <div
+      className={cn(
+        " flex flex-col min-w-25 max-w-85 w-60 sm:w-4/10 md:w-75 sm:max-w-75 md:h-100 ",
+        "border border-secondary dark:border-primary",
+        "ease-in-out duration-150 hover:scale-105 ",
+        " shadow-xl/10 dark:shadow-3xl dark:shadow-cyan-600 ",
+      )}
+    >
+      <div className="relative w-full aspect-3/2 h-5/7">
+        <Image
+          alt="image"
+          src={`https://images.pexels.com/photos/193057/pexels-photo-193057.jpeg`}
+          fill
+          className="z-0"
+        />
+      </div>
+      <div className=" md:h-1/2 w-full ">
+        <h4 className=" pt-2 pl-2 text-2xl font-bold">Laser jet printer</h4>
+        <p className=" p-2 text-sm/4 text-muted-foreground">
+          Wireless; Automatic document feeder; Two-sided printing; Two-sided
+          scanning; Scan to email; Scan to PDF; Fax; Front USB flash drive ...
+        </p>
+        <div className="flex mt-3 gap-1 justify-end pr-2 mb-5">
+          <Button title="share" className="">
+            <Share />
+          </Button>
+          <Button title="info" className="">
+            <Info />
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}
