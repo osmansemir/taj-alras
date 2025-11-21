@@ -110,19 +110,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
       <SidebarHeader>
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild>
-              <a href="#">
-                <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="text-xl">Taj Alras</span>
-                  <span className="">Goods wholesalers L.L.C</span>
-                </div>
-              </a>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
-        <SearchForm />
+        <SearchForm className="mt-18" />
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>

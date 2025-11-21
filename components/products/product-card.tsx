@@ -8,7 +8,7 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <div
       className={cn(
-        " flex flex-col min-w-25 max-w-85 w-60 sm:w-4/10 md:w-75 sm:max-w-75 md:min-h-100 ",
+        " flex flex-col md:min-h-100 ",
         "border border-secondary dark:border-primary",
         "ease-in-out duration-150 hover:scale-105 ",
         " shadow-xl/10 dark:shadow-3xl dark:shadow-cyan-600 ",

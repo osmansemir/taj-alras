@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <div className="flex items-center justify-center flex-1">
-      <div className="flex flex-col w-1/2 text-center">
+      <div className="flex flex-col w-1/2">
         <h1 className="font-sans text-3xl">Contact</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

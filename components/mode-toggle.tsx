@@ -17,7 +17,7 @@ export function ModeToggle({ className }: { className?: string }) {
     <Button
       onClick={handleThemeChange}
       className={cn(
-        " size-5  bg-background text-foreground hover:bg-background hover:text-primary",
+        " size-5  bg-background text-foreground hover:bg-background hover:text-primary cursor-pointer ",
         className,
       )}
     >
