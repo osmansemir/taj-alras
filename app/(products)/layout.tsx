@@ -1,12 +1,4 @@
 import { AppSidebar } from "@/components/app-sidebar";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 import { Separator } from "@/components/ui/separator";
 import {
   SidebarInset,
@@ -15,6 +7,7 @@ import {
 } from "@/components/ui/sidebar";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import AppBreadcrumb from "@/components/app-breadcrumb";
 
 export default function Layout({
   children,
@@ -33,14 +26,7 @@ export default function Layout({
               orientation="vertical"
               className="mr-2 data-[orientation=vertical]:h-4"
             />
-            <Breadcrumb className="grow">
-              <BreadcrumbList>
-                <BreadcrumbItem className="hidden md:block">
-                  <BreadcrumbLink href="#">Products</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="hidden md:block" />
-              </BreadcrumbList>
-            </Breadcrumb>
+            <AppBreadcrumb />
           </header>
           {children}
         </SidebarInset>

@@ -1,11 +1,19 @@
 import ProductList from "@/components/products/products-list";
-import { getProducts } from "@/lib/data";
+import ProductSkeleton from "@/components/skeletons/products-skeleton";
+import { Suspense } from "react";
 
-export default async function Page() {
-  const products = await getProducts(1);
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ category?: string }>;
+}) {
+  const params = await searchParams;
+  const category = params?.category || "";
   return (
     <main className="flex w-full justify-center font-sans ">
-      <ProductList products={products} />
+      <Suspense fallback={<ProductSkeleton />}>
+        <ProductList category={category} />
+      </Suspense>
     </main>
   );
 }

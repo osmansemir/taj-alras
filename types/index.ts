@@ -1,8 +1,13 @@
 export type Product = {
   name: string;
-  id: number;
+  id: string;
   desc: string;
   img: string;
   category: string;
   subCategory: string;
+};
+
+export type Category = {
+  category: string;
+  subCategories?: string[];
 };
