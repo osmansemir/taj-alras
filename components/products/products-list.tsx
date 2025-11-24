@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import ProductCard from "./product-card";
-import { Product } from "@/types";
 import { getProducts } from "@/lib/data";
 
 export default async function ProductList({ category }: { category: string }) {
