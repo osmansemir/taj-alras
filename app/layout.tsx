@@ -16,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${fraunces.variable} antialiased`}>
+      <body
+        className={`${poppins.variable} ${fraunces.variable} antialiased font-serif`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

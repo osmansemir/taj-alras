@@ -20,10 +20,12 @@ export default function AppBreadcrumb() {
   return (
     <Breadcrumb className="grow">
       <BreadcrumbList>
-        {isMobile ? (
-          <>
-            <BreadcrumbEllipsis className="" />
-          </>
+        {isMobile && category ? (
+          <Link href="/products">
+            <BreadcrumbItem>
+              <BreadcrumbEllipsis />
+            </BreadcrumbItem>
+          </Link>
         ) : (
           <BreadcrumbItem className="hidden md:block">
             <BreadcrumbLink asChild>
@@ -31,14 +33,21 @@ export default function AppBreadcrumb() {
             </BreadcrumbLink>
           </BreadcrumbItem>
         )}
+        {isMobile && !category && (
+          <BreadcrumbItem>
+            <BreadcrumbPage>Products</BreadcrumbPage>{" "}
+          </BreadcrumbItem>
+        )}
         {category && (
           <>
             <BreadcrumbSeparator className="" />
-            <BreadcrumbPage>
-              {category
-                .replace(/\b\w/g, (str) => str.toUpperCase())
-                .replace(/\-/g, " ")}
-            </BreadcrumbPage>
+            <BreadcrumbItem>
+              <BreadcrumbPage>
+                {category
+                  .replace(/\b\w/g, (str) => str.toUpperCase())
+                  .replace(/\-/g, " ")}
+              </BreadcrumbPage>
+            </BreadcrumbItem>
           </>
         )}
       </BreadcrumbList>
