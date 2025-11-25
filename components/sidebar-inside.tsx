@@ -29,7 +29,7 @@ export default async function SidebarInside() {
           <SidebarMenuItem>
             <CollapsibleTrigger asChild>
               <SidebarMenuButton>
-                {category.category}
+                {category.category.replace(/\b\w/g, (str) => str.toUpperCase())}
                 <Plus className="ml-auto group-data-[state=open]/collapsible:hidden" />
                 <Minus className="ml-auto group-data-[state=closed]/collapsible:hidden" />
               </SidebarMenuButton>
@@ -43,7 +43,9 @@ export default async function SidebarInside() {
                         <Link
                           href={`/products?category=${generateSlug(subCategory)}`}
                         >
-                          {subCategory}
+                          {subCategory.replace(/\b\w/g, (str) =>
+                            str.toUpperCase(),
+                          )}
                         </Link>
                       </SidebarMenuSubButton>
                     </SidebarMenuSubItem>
