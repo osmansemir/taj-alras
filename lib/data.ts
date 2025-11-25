@@ -1,4 +1,4 @@
-import { Product } from "@/types";
+import { Category, CategoryMap, Product, RawCategory } from "@/types";
 import products from "@/data/MOCK_DATA.json";
 import { generateSlug } from "./utils";
 import { createClient } from "@/lib/supabase/server";
@@ -6,30 +6,20 @@ import { createClient } from "@/lib/supabase/server";
 const PAGE_LIMIT = 10;
 const supabase = await createClient();
 
-export async function getProducts(
-  category: string,
-  page: number = 1,
-): Promise<Product[] | []> {
-  // await new Promise((resolve) => setTimeout(resolve, 3000));
-  const totalPages = await getPageCount();
-  try {
-    const { data: products } = await supabase.from("products").select();
+export async function getProducts(category: string) {
+  const { data: products, error } = await supabase.from("products").select();
 
-    if (page > totalPages) return [];
-    if (products) {
-      if (category) {
-        return products.filter(
-          (product) => generateSlug(product.subCategory) === category,
-        );
-      }
-
-      return products.slice((page - 1) * PAGE_LIMIT, page * PAGE_LIMIT);
-    }
-  } catch (error) {
-    console.error("Error fetching products:", error);
+  if (error) {
+    console.log("Error Fetching Products", error.message);
   }
 
-  return [];
+  if (products && category) {
+    return products.filter(
+      (product) => generateSlug(product.subCategory) === category,
+    );
+  }
+
+  return products;
 }
 
 export async function getPageCount() {
@@ -42,7 +32,7 @@ export async function getPageCount() {
     return 0;
   }
 
-  const pages = Math.ceil(count / PAGE_LIMIT);
+  const pages = count && Math.ceil(count / PAGE_LIMIT);
   return pages;
 }
 
@@ -52,46 +42,29 @@ export async function getCategories() {
     .select("category, subCategory")
     .order("category", { ascending: true });
 
-  console.log("Raw Data", rawData);
   if (error) {
     console.log("Error fetching from server", error);
     return [];
   }
+
   if (!rawData || rawData.length === 0) return [];
 
-const groupedCategories = rawData.reduce((acc, currentItem) => {
-    const { category, subCategory } = currentItem;
-
-    // Find if a category object already exists in the accumulator (acc)
-    let existingCategory = acc.find(item => item.category === category);
-
-    // If the category object doesn't exist, create it
-    if (!existingCategory) {
-      existingCategory = {
-        category: category,
-        subCategories: []
-      };
-      acc.push(existingCategory);
-    }
-
-  const allCategories = Array.from(
-    new Set(products.map((product) => product.category)),
+  const categoryMap = rawData.reduce(
+    (acc: CategoryMap, currentItem: RawCategory) => {
+      const { category, subCategory } = currentItem;
+      if (!acc[category]) {
+        acc[category] = {
+          category: category,
+          subCategories: [],
+        };
+      }
+      const currentCategory = acc[category];
+      if (subCategory && !currentCategory.subCategories.includes(subCategory)) {
+        currentCategory.subCategories.push(subCategory);
+      }
+      return acc;
+    },
+    {} as CategoryMap,
   );
-
-  const categoriesWithSubs = allCategories.map((category) => {
-    const subs = Array.from(
-      new Set(
-        products
-          .filter((item) => item.category === category)
-          .map((item) => item.subCategory),
-      ),
-    );
-
-    return {
-      category,
-      subCategories: subs,
-    };
-  });
-
-  return categoriesWithSubs;
+  return Object.values(categoryMap);
 }

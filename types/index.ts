@@ -9,5 +9,12 @@ export type Product = {
 
 export type Category = {
   category: string;
-  subCategories?: string[];
+  subCategories: string[];
 };
+
+export type RawCategory = {
+  category: string;
+  subCategory: string;
+};
+
+export type CategoryMap = Record<string, Category>;
