@@ -1,5 +1,4 @@
-import { Category, CategoryMap, Product, RawCategory } from "@/types";
-import products from "@/data/MOCK_DATA.json";
+import { CategoryMap, RawCategory } from "@/types";
 import { generateSlug } from "./utils";
 import { createClient } from "@/lib/supabase/server";
 

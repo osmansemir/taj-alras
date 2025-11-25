@@ -12,9 +12,10 @@ export default async function ProductList({ category }: { category: string }) {
           "justify-center py-10 px-4 md:px-4 gap-3 md:gap-6 ",
         )}
       >
-        {products.map((product) => {
-          return <ProductCard key={product.id} product={product} />;
-        })}
+        {products &&
+          products.map((product) => {
+            return <ProductCard key={product.id} product={product} />;
+          })}
       </div>
     </div>
   );

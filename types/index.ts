@@ -1,6 +1,6 @@
 export type Product = {
   name: string;
-  id: string;
+  id: number;
   desc: string;
   img: string;
   category: string;
