@@ -3,9 +3,9 @@ import { generateSlug } from "./utils";
 import { createClient } from "@/lib/supabase/server";
 
 const PAGE_LIMIT = 10;
-const supabase = await createClient();
 
 export async function getProducts(category: string) {
+  const supabase = await createClient();
   const { data: products, error } = await supabase.from("products").select();
 
   if (error) {
@@ -22,6 +22,7 @@ export async function getProducts(category: string) {
 }
 
 export async function getPageCount() {
+  const supabase = await createClient();
   const { count, error } = await supabase
     .from("products")
     .select("*", { count: "exact", head: true });
@@ -36,6 +37,7 @@ export async function getPageCount() {
 }
 
 export async function getCategories() {
+  const supabase = await createClient();
   const { data: rawData, error } = await supabase
     .from("products")
     .select("category, subCategory")
