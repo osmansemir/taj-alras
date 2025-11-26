@@ -1,4 +1,5 @@
-import { Skeleton } from "../ui/skeleton";
+import { generateRandomWidth } from "@/lib/utils";
+import { SidebarMenuSkeleton } from "../ui/sidebar";
 
 export default function SidebarSkeleton() {
   return (
@@ -6,7 +7,11 @@ export default function SidebarSkeleton() {
       {Array(20)
         .fill(null)
         .map((_, index) => (
-          <Skeleton key={index} className="w-full h-5" />
+          <SidebarMenuSkeleton
+            key={index}
+            className="w-full h-5"
+            width={`${generateRandomWidth()}`}
+          />
         ))}
     </div>
   );

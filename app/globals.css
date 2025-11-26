@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -207,4 +208,3 @@
     letter-spacing: var(--tracking-normal);
   }
 }
-

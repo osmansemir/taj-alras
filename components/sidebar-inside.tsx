@@ -8,11 +8,9 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarMenuSub,
-  SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
 import { getCategories } from "@/lib/data";
-import { generateSlug } from "@/lib/utils";
 import { Minus, Plus } from "lucide-react";
 import SubCategoryItem from "./sub-category-item";
 
@@ -20,7 +18,7 @@ export default async function SidebarInside() {
   const data = await getCategories();
   return (
     <SidebarMenu>
-      {data.map((category, index) => (
+      {data.map((category) => (
         <Collapsible
           key={category.category}
           defaultOpen={true}

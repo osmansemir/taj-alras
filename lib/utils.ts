@@ -13,3 +13,8 @@ export const generateSlug = (title: string) => {
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
 };
+
+export const generateRandomWidth = () => {
+  const num = Math.floor(Math.random() * 40) + 50;
+  return `${num}%`;
+};
