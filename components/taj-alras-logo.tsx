@@ -1,6 +1,7 @@
 export default function TajAlrasLogo({ className }: { className?: string }) {
   return (
     <div className={className}>
+      <span className="sr-only">Taj AlRas Logo</span>
       <svg
         width="100%"
         height="100%"

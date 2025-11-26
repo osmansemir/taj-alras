@@ -17,11 +17,19 @@ export function ModeToggle({ className }: { className?: string }) {
     <Button
       onClick={handleThemeChange}
       className={cn(
-        " size-5  bg-background text-foreground hover:bg-background hover:text-primary cursor-pointer ",
+        "w-full md:w-5 md:bg-background  md:text-foreground md:hover:bg-background md:hover:text-primary cursor-pointer ",
+        "bg-foreground text-background hover:bg-primary hover:text-foreground",
         className,
       )}
     >
-      {theme === "light" ? <Moon className="" /> : <Sun className="" />}
+      {theme === "light" ? (
+        <Moon className="text-background md:text-foreground" />
+      ) : (
+        <Sun className="text-background md:text-foreground" />
+      )}
+      <span className="block md:hidden">
+        {theme === "light" ? "Dark" : "Light"}
+      </span>
       <span className="sr-only">Theme Toggle</span>
     </Button>
   );
