@@ -11,7 +11,7 @@ export default async function Page({
   const category = params?.category || "";
   const searchString = params?.search || "";
   return (
-    <main className="flex w-full justify-center font-sans ">
+    <main className="flex w-full justify-center font-sans flex-1 ">
       <Suspense fallback={<ProductSkeleton />}>
         <ProductList category={category} searchString={searchString} />
       </Suspense>
