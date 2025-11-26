@@ -14,7 +14,7 @@ import {
 import { getCategories } from "@/lib/data";
 import { generateSlug } from "@/lib/utils";
 import { Minus, Plus } from "lucide-react";
-import Link from "next/link";
+import SubCategoryItem from "./sub-category-item";
 
 export default async function SidebarInside() {
   const data = await getCategories();
@@ -39,15 +39,7 @@ export default async function SidebarInside() {
                 <SidebarMenuSub>
                   {category.subCategories.map((subCategory) => (
                     <SidebarMenuSubItem key={subCategory}>
-                      <SidebarMenuSubButton asChild isActive={false}>
-                        <Link
-                          href={`/products?category=${generateSlug(subCategory)}`}
-                        >
-                          {subCategory.replace(/\b\w/g, (str) =>
-                            str.toUpperCase(),
-                          )}
-                        </Link>
-                      </SidebarMenuSubButton>
+                      <SubCategoryItem subCategory={subCategory} />
                     </SidebarMenuSubItem>
                   ))}
                 </SidebarMenuSub>
