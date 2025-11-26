@@ -5,14 +5,15 @@ import { Suspense } from "react";
 export default async function Page({
   searchParams,
 }: {
-  searchParams: Promise<{ category?: string }>;
+  searchParams: Promise<{ category?: string; search: string }>;
 }) {
   const params = await searchParams;
   const category = params?.category || "";
+  const searchString = params?.search || "";
   return (
     <main className="flex w-full justify-center font-sans ">
       <Suspense fallback={<ProductSkeleton />}>
-        <ProductList category={category} />
+        <ProductList category={category} searchString={searchString} />
       </Suspense>
     </main>
   );

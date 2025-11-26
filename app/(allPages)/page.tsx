@@ -1,6 +1,8 @@
 import { Skeleton } from "@/components/ui/skeleton";
+import { searchProducts } from "@/lib/data";
 
 export default function Home() {
+  searchProducts("cow");
   return (
     <div className="flex flex-1 items-center justify-center font-sans">
       <main className="flex flex-wrap gap-4">

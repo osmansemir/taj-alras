@@ -2,8 +2,14 @@ import { cn } from "@/lib/utils";
 import ProductCard from "./product-card";
 import { getProducts } from "@/lib/data";
 
-export default async function ProductList({ category }: { category: string }) {
-  const products = await getProducts(category);
+export default async function ProductList({
+  category,
+  searchString,
+}: {
+  category: string;
+  searchString: string;
+}) {
+  const products = await getProducts(category, searchString);
   return (
     <div className="@container w-full">
       <div

@@ -20,6 +20,7 @@ export function SearchForm({ ...props }: React.ComponentProps<"form">) {
   const handleSearch = useDebouncedCallback((str: string) => {
     const params = new URLSearchParams(parmas);
     if (str) {
+      params.delete("category");
       params.set("search", str);
     } else {
       params.delete("search");
