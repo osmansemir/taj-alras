@@ -23,7 +23,7 @@ export default async function SidebarInside() {
       {data.map((category, index) => (
         <Collapsible
           key={category.category}
-          defaultOpen={index === 1}
+          defaultOpen={true}
           className="group/collapsible"
         >
           <SidebarMenuItem>
