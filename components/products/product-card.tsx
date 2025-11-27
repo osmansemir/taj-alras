@@ -1,6 +1,4 @@
-import { Info, Share } from "lucide-react";
 import Image from "next/image";
-import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { Product } from "@/types";
 
@@ -26,17 +24,9 @@ export default function ProductCard({ product }: { product: Product }) {
       </div>
       <div className=" w-full flex flex-col h-full">
         <h4 className=" pt-2 pl-2 text-2xl font-bold">{product.name}</h4>
-        <p className="font-serif p-2 text-sm/4 text-muted-foreground flex-1">
+        <p className="font-serif pb-4 p-2 text-sm/4 text-muted-foreground flex-1">
           {product.desc}
         </p>
-        <div className="flex gap-1 justify-end pr-2 mb-5">
-          <Button title="share" className="">
-            <Share />
-          </Button>
-          <Button title="info" className="">
-            <Info />
-          </Button>
-        </div>
       </div>
     </div>
   );
