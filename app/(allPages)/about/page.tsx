@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="flex items-center justify-center flex-1 py-10">
+    <main role="main" className="flex items-center justify-center flex-1 py-10">
       <div className="prose dark:prose-invert flex flex-col w-9/10 lg:w-1/2">
         <h1 className="font-sans text-3xl">
           Taj Alras Goods wholesalers L.L.C
@@ -34,6 +34,6 @@ export default function About() {
           businesses with integrity and long-term partnership.
         </p>
       </div>
-    </div>
+    </main>
   );
 }

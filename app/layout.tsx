@@ -5,8 +5,23 @@ import { fraunces, poppins } from "@/app/fonts";
 import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
-  title: "Taj Alras Goods Wholesalers L.L.C",
-  description: "A public catalog website for our products",
+  title: "Taj Alras Goods Wholesalers | Crowning Your Business with Quality",
+  description:
+    "Taj Alras is a trusted wholesale supplier providing reliable, high-quality goods sourced from global partners since 2003.",
+  keywords: [
+    "Taj Alras",
+    "Wholesale Supplier",
+    "General Trading",
+    "Global Goods",
+    "Import Export",
+    "Reliable Supply",
+    "Trading Company",
+  ],
+  authors: [{ name: "Taj Alras Goods Wholesalers L.L.C" }],
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

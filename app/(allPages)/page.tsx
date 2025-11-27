@@ -13,7 +13,10 @@ export default function Home() {
     { text: "Quality?" },
   ];
   return (
-    <main className="flex flex-col items-center justify-start py-10 gap-4 flex-1">
+    <main
+      role="main"
+      className="flex flex-col items-center justify-start py-10 gap-4 flex-1"
+    >
       <section className="w-full px-10 lg:px-0 lg:w-4/5 grid sm:grid-cols-2 ">
         <div className="flex flex-col justify-center items-center lg:min-h-80 py-10">
           <h1 className="text-6xl font-bold md:text-7xl pb-2 font-sans">
