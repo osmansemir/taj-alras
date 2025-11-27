@@ -1,33 +1,36 @@
-import { Skeleton } from "@/components/ui/skeleton";
-import { searchProducts } from "@/lib/data";
+import { Globe } from "@/components/ui/globe";
+import {
+  TypewriterEffect,
+  TypewriterEffectSmooth,
+} from "@/components/ui/typewriter-effect";
 
 export default function Home() {
-  searchProducts("cow");
+  const words = [
+    { text: "Crowning" },
+    { text: "Your" },
+    { text: "Business" },
+    { text: "with" },
+    { text: "Quality?" },
+  ];
   return (
-    <div className="flex flex-1 items-center justify-center font-sans">
-      <main className="flex flex-wrap gap-4">
-        <div className="flex flex-col space-y-3">
-          <Skeleton className="h-[125px] w-[250px] rounded-xl" />
-          <div className="space-y-2">
-            <Skeleton className="h-4 w-[250px]" />
-            <Skeleton className="h-4 w-[200px]" />
-          </div>
+    <main className="flex flex-col items-center justify-start py-10 gap-4 flex-1">
+      <section className="w-full px-10 lg:px-0 lg:w-4/5 grid sm:grid-cols-2 ">
+        <div className="flex flex-col justify-center items-center lg:min-h-80 py-10">
+          <h1 className="text-6xl font-bold md:text-7xl pb-2 font-sans">
+            Taj Alras
+          </h1>
+          <p className="text-lg md:text-2xl pb-2">Goods Wholesalers L.L.C</p>
+          <TypewriterEffectSmooth words={words} />
         </div>
-        <div className="flex flex-col space-y-3">
-          <Skeleton className="h-[125px] w-[250px] rounded-xl" />
-          <div className="space-y-2">
-            <Skeleton className="h-4 w-[250px]" />
-            <Skeleton className="h-4 w-[200px]" />
+        <div className="flex flex-col  justify-center items-center ">
+          <div className="relative w-70 md:w-100 min-h-70 md:min-h-100 ">
+            <Globe />
           </div>
+          <p className="text-center">
+            Connecting You to Trusted Suppliers Across the Globe
+          </p>
         </div>
-        <div className="flex flex-col space-y-3">
-          <Skeleton className="h-[125px] w-[250px] rounded-xl" />
-          <div className="space-y-2">
-            <Skeleton className="h-4 w-[250px]" />
-            <Skeleton className="h-4 w-[200px]" />
-          </div>
-        </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }

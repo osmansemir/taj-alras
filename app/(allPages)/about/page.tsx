@@ -6,30 +6,32 @@ export default function About() {
           Taj Alras Goods wholesalers L.L.C
         </h1>
         <p>
-          Founded in 2003, Taj Alras has grown from a small trading operation
-          into a trusted wholesale supplier serving businesses across the
-          region. From the beginning, our mission has been clear: provide
-          reliable access to high-quality goods at competitive prices while
-          maintaining strong, long-term partnerships with our clients.
+          Taj Alras began its journey in 2003 under the name Fly General
+          Trading. What started as a small trading company steadily grew into a
+          dependable wholesale supplier known for reliability, quality, and
+          strong business partnerships. As the company evolved and expanded its
+          operations, the name was changed to Taj Alras to better reflect its
+          renewed vision and broader reach in the wholesale market.
         </p>
         <p>
-          Over the years, we have expanded our product lines, strengthened our
-          supplier network, and streamlined our logistics to ensure fast and
-          dependable delivery. Our commitment to consistency and transparency
-          has helped us build a reputation as a supplier companies can rely on,
-          whether they are retailers, distributors, or commercial partners.
+          Throughout the years, we have maintained a clear focus: providing
+          businesses with consistent access to high-quality goods at competitive
+          prices. Our growth has been built on trust, transparency, and a
+          commitment to delivering value—whether serving retailers,
+          distributors, or commercial clients.
         </p>
         <p>
-          At Taj Alras, we understand that every business depends on stable
-          supply, honest communication, and products they can trust. That is why
-          we continue to invest in better systems, wider selections, and a
-          customer-first approach that puts our partners’ needs at the center of
-          everything we do.
+          The transition from Fly General Trading to Taj Alras marked more than
+          a name change; it represented our dedication to progress, improved
+          service, and a wider product range backed by efficient logistics.
+          Today, Taj Alras continues to operate with the same spirit that
+          defined its beginnings, strengthened by decades of experience in the
+          market.
         </p>
         <p>
-          With more than two decades of experience in the wholesale market, Taj
-          Alras remains dedicated to supporting businesses with value,
-          efficiency, and integrity—today and in the years ahead.
+          With a strong supplier network, reliable delivery systems, and a
+          customer-first approach, Taj Alras remains committed to supporting
+          businesses with integrity and long-term partnership.
         </p>
       </div>
     </div>
