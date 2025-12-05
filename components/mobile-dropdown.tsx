@@ -14,6 +14,7 @@ export default function MobileDropdown() {
       <DropdownMenu>
         <DropdownMenuTrigger>
           <Menu />
+          <span className="sr-only">navigation menu</span>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           <DropdownMenuItem>
