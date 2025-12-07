@@ -22,9 +22,9 @@ export default function Header() {
           className="flex items-center gap-6  font-serif *:hover:underline *:hover:text-primary *:ease-in-out"
         >
           <Link href="/">Home</Link>
-          <Link href="/products">products</Link>
-          <Link href="/about">about</Link>
-          <Link href="/contact">contact</Link>
+          <Link href="/products">Products</Link>
+          <Link href="/about">About</Link>
+          <Link href="/#contact">Contact</Link>
         </nav>
         <ModeToggle className="" />
       </div>

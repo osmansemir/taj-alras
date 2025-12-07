@@ -27,7 +27,7 @@ export default function MobileDropdown() {
             <Link href="/about">About</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href="/contact">Contact</Link>
+            <Link href="/#contact">Contact</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
             <ModeToggle />
