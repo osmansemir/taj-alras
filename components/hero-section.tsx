@@ -22,7 +22,7 @@ export default function HeroSection() {
         <div className="relative w-70 md:w-100 min-h-70 md:min-h-100 ">
           <Globe />
         </div>
-        <p className="text-center">
+        <p className="text-center text-muted-foreground">
           Connecting You to Trusted Suppliers Across the Globe
         </p>
       </div>

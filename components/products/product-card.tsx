@@ -14,7 +14,7 @@ export default function ProductCard({ product }: { product: Product }) {
     >
       <div className="relative w-full aspect-3/2 ">
         <Image
-          alt="image"
+          alt={`${product.name}-image`}
           src={product.img}
           fill
           className="z-0"
@@ -23,7 +23,9 @@ export default function ProductCard({ product }: { product: Product }) {
         />
       </div>
       <div className=" w-full flex flex-col h-full">
-        <h4 className=" pt-2 pl-2 text-2xl font-bold">{product.name}</h4>
+        <h4 className=" pt-2 pl-2 text-2xl font-bold">
+          {product.name.replace(/\b\w/g, (str) => str.toUpperCase())}
+        </h4>
         <p className="font-serif pb-4 p-2 text-sm/4 text-muted-foreground flex-1">
           {product.desc}
         </p>

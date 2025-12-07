@@ -7,7 +7,7 @@ export default function ContactSection() {
       id="contact"
       className="w-full flex justify-center flex-col gap-10  border-t px-5 bg-accent mt-5 pt-20  "
     >
-      <div className="w-full mx-auto prose">
+      <div className="w-full mx-auto prose dark:prose-invert dark:text-foreground">
         <h2 className="text-xl text-pretty">CONTACT US</h2>
         <p>Let’s Build Something Reliable Together</p>
 
@@ -33,7 +33,7 @@ export default function ContactSection() {
         </p>
       </div>
       <Button
-        className="sm:mx-auto bg-green-600 hover:bg-green-500 duration-75 ease-in-out"
+        className="sm:mx-auto bg-green-600 hover:bg-green-500 duration-75 dark:text-white ease-in-out"
         asChild
       >
         <Link href="/">
