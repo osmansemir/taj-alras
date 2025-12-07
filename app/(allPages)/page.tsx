@@ -1,17 +1,8 @@
 import ContactSection from "@/components/contact-section";
 import HeroSection from "@/components/hero-section";
 import Story from "@/components/story-section";
-import { Globe } from "@/components/ui/globe";
-import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 
 export default function Home() {
-  const words = [
-    { text: "Crowning" },
-    { text: "Your" },
-    { text: "Business" },
-    { text: "with" },
-    { text: "Quality?" },
-  ];
   return (
     <main
       role="main"
@@ -20,6 +11,9 @@ export default function Home() {
       <HeroSection />
       <Story />
       <ContactSection />
+      <p className="text-center text-muted-foreground px-5 py-10">
+        Trusted partners. Global reach. Reliable supply.
+      </p>
     </main>
   );
 }

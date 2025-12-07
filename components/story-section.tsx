@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Story() {
   return (
-    <section className="w-full sm:w-8/10 md:w-full min-h-100 px-5 grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 py-10">
+    <section className="w-full sm:w-8/10 md:w-full min-h-100 px-5 grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 ">
       <div className=" md:flex items-center hidden">
         <div className="relative  w-full h-full">
           <Image
@@ -18,7 +18,7 @@ export default function Story() {
         </div>
       </div>
       <div className="space-y-5">
-        <h3 className="font text-lg">OUR STORY</h3>
+        <h3 className="font text-lg max-md:text-center">OUR STORY</h3>
         <h2 className="font-sans text-4xl md:text-5xl lg:text-7xl text-pretty">
           A Legacy of Reliable Supply
         </h2>

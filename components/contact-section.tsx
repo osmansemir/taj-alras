@@ -5,10 +5,10 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="w-full flex justify-center flex-col gap-10  border-t px-5 bg-accent mt-5 pt-20  "
+      className="w-full flex justify-center flex-col gap-5  border-t px-5 bg-accent mt-5 py-10  "
     >
-      <div className="w-full mx-auto prose dark:prose-invert dark:text-foreground">
-        <h2 className="text-xl text-pretty">CONTACT US</h2>
+      <div className="w-full mx-auto prose-h2:font-normal prose dark:prose-invert dark:text-foreground">
+        <h2 className="text-lg text-pretty max-md:text-center">CONTACT US</h2>
         <p>Let’s Build Something Reliable Together</p>
 
         <p>
@@ -36,7 +36,7 @@ export default function ContactSection() {
         className="sm:mx-auto bg-green-600 hover:bg-green-500 duration-75 dark:text-white ease-in-out"
         asChild
       >
-        <Link href="/">
+        <Link href="https://wa.me/+971582151990">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -62,9 +62,6 @@ export default function ContactSection() {
           Whatsapp
         </Link>
       </Button>
-      <p className="text-center text-muted-foreground pb-15">
-        Trusted partners. Global reach. Reliable supply.
-      </p>
     </section>
   );
 }
