@@ -1,7 +1,20 @@
+import Image from "next/image";
+
 export default function About() {
   return (
-    <main role="main" className="flex items-center justify-center flex-1 py-10">
+    <main role="main" className="flex items-center justify-center flex-1 pb-10">
       <div className="prose dark:prose-invert flex flex-col w-9/10 lg:w-1/2">
+        <div className="relative  w-full h-100 mb-15">
+          <Image
+            alt="Two men shaking hands"
+            src="https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg"
+            fill
+            className="z-0"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading="lazy"
+            objectFit="cover"
+          />
+        </div>
         <h1 className="font-sans text-3xl">
           Taj Alras Goods wholesalers L.L.C
         </h1>

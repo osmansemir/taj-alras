@@ -1,8 +1,8 @@
+import ContactSection from "@/components/contact-section";
+import HeroSection from "@/components/hero-section";
+import Story from "@/components/story-section";
 import { Globe } from "@/components/ui/globe";
-import {
-  TypewriterEffect,
-  TypewriterEffectSmooth,
-} from "@/components/ui/typewriter-effect";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 
 export default function Home() {
   const words = [
@@ -15,25 +15,11 @@ export default function Home() {
   return (
     <main
       role="main"
-      className="flex flex-col items-center justify-start py-10 gap-4 flex-1"
+      className="flex flex-col items-center justify-start pt-10 gap-4 flex-1"
     >
-      <section className="w-full px-10 lg:px-0 lg:w-4/5 grid sm:grid-cols-2 ">
-        <div className="flex flex-col justify-center items-center lg:min-h-80 py-10">
-          <h1 className="text-6xl font-bold md:text-7xl pb-2 font-sans">
-            Taj Alras
-          </h1>
-          <p className="text-lg md:text-2xl pb-2">Goods Wholesalers L.L.C</p>
-          <TypewriterEffectSmooth words={words} />
-        </div>
-        <div className="flex flex-col  justify-center items-center ">
-          <div className="relative w-70 md:w-100 min-h-70 md:min-h-100 ">
-            <Globe />
-          </div>
-          <p className="text-center">
-            Connecting You to Trusted Suppliers Across the Globe
-          </p>
-        </div>
-      </section>
+      <HeroSection />
+      <Story />
+      <ContactSection />
     </main>
   );
 }
