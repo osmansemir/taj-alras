@@ -1,9 +1,13 @@
 import { Skeleton } from "../ui/skeleton";
 
-export default function ProductSkeleton() {
+export default function ProductSkeleton({
+  numberOfItems,
+}: {
+  numberOfItems: number;
+}) {
   return (
-    <div className="w-full p-10 gap-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      {Array(10)
+    <div className="w-full justify-around mx-auto p-10 gap-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      {Array(numberOfItems)
         .fill(null)
         .map((_, index) => (
           <div

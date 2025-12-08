@@ -19,6 +19,22 @@ export async function getProducts(category: string, searchString: string) {
 
   if (error) {
     console.log("Error Fetching Products", error.message);
+    return [];
+  }
+
+  return products;
+}
+
+export async function getFeaturedProducts() {
+  const supabase = await createClient();
+  const { data: products, error } = await supabase
+    .from("products")
+    .select()
+    .eq("featured", true);
+
+  if (error) {
+    console.log("Error Fetching Products", error.message);
+    return [];
   }
 
   return products;
