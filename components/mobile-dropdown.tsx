@@ -31,7 +31,6 @@ export default function MobileDropdown() {
             <Link href="/#contact">Contact</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <ModeToggle />
             <AnimatedThemeToggler />
           </DropdownMenuItem>
         </DropdownMenuContent>
