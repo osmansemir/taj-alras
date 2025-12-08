@@ -199,6 +199,12 @@
   --shadow-2xl: 2px 3px 5px 0px hsl(28 13% 20% / 0.3);
 }
 
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { ModeToggle } from "@/components/mode-toggle";
 import TajAlrasLogo from "@/components/taj-alras-logo";
 import MobileDropdown from "@/components/mobile-dropdown";
+import { AnimatedThemeToggler } from "./animated-theme-toggle";
 
 export default function Header() {
   return (
@@ -26,7 +26,8 @@ export default function Header() {
           <Link href="/about">About</Link>
           <Link href="/#contact">Contact</Link>
         </nav>
-        <ModeToggle className="" />
+        {/* <ModeToggle className="" /> */}
+        <AnimatedThemeToggler />
       </div>
       <div className="flex items-center md:hidden">
         <MobileDropdown />

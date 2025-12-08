@@ -7,6 +7,7 @@ import {
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { ModeToggle } from "@/components/mode-toggle";
+import { AnimatedThemeToggler } from "./animated-theme-toggle";
 
 export default function MobileDropdown() {
   return (
@@ -31,6 +32,7 @@ export default function MobileDropdown() {
           </DropdownMenuItem>
           <DropdownMenuItem>
             <ModeToggle />
+            <AnimatedThemeToggler />
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
