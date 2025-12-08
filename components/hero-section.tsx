@@ -10,7 +10,7 @@ export default function HeroSection() {
     { text: "Quality?" },
   ];
   return (
-    <section className="w-full px-10 lg:px-0 lg:w-4/5 grid sm:grid-cols-2 ">
+    <section className="w-full px-10 lg:px-0 pb-20 lg:w-4/5 grid sm:grid-cols-2 ">
       <div className="flex flex-col justify-center items-center lg:min-h-80 py-10">
         <h1 className="text-6xl font-bold md:text-7xl pb-2 font-sans">
           Taj Alras
