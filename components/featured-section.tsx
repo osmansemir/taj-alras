@@ -32,11 +32,11 @@ export default async function FeaturedSection() {
                   <DialogImage
                     src={product.img}
                     alt=""
-                    className="h-52 w-full object-cover"
+                    className="h-36 md:h-50 w-full object-cover"
                   />
                   <div className="flex grow flex-row items-end justify-between p-3">
                     <div>
-                      <DialogTitle className=" font-sans font-bold text-xl">
+                      <DialogTitle className="h-19 md:h-14 font-sans font-bold text-xl">
                         {product.name.replace(/\b\w/g, (str) =>
                           str.toUpperCase(),
                         )}
