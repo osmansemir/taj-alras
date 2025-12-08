@@ -6,7 +6,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Menu } from "lucide-react";
 import Link from "next/link";
-import { ModeToggle } from "@/components/mode-toggle";
 import { AnimatedThemeToggler } from "./animated-theme-toggle";
 
 export default function MobileDropdown() {
